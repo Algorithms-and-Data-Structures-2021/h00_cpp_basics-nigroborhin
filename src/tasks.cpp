@@ -11,7 +11,11 @@ using std::copy;
 
 // Задание 1
 void swap_args(int *lhs, int *rhs) {
-    // напишите код здесь ...
+    if (lhs != nullptr && rhs != nullptr) {
+        int c = *lhs;
+        *lhs = *rhs;
+        *rhs = c;
+    }
 }
 
 // Задание 2
