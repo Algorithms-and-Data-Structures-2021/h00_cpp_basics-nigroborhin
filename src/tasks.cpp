@@ -20,8 +20,21 @@ void swap_args(int *lhs, int *rhs) {
 
 // Задание 2
 int **allocate_2d_array(int num_rows, int num_cols, int init_value) {
-    // напишите код здесь ...
-    return nullptr;
+    if (num_rows <= 0 || num_cols <= 0) {
+        return nullptr;
+    }
+    else{
+        int **massive = new int* [num_rows];
+        for (int i = 0; i < num_rows; i++) {
+            massive[i] = new int[num_cols];
+        }
+        for(int i = 0; i < num_rows; i++){
+            for (int j = 0; j < num_cols; j++){
+                massive[i][j] = init_value;
+            }
+        }
+        return massive;
+    }
 }
 
 // Задание 3
